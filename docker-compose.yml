@@ -1,0 +1,9 @@
+services:
+  app:
+    build: ./app
+    stop_signal: SIGKILL
+    command: python3 main.py
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/usr/src/app
